@@ -1,5 +1,6 @@
 import pytest
-from app.app import app
+from app.meu_site import app
+
 
 @pytest.fixture
 def client():
@@ -15,4 +16,4 @@ def test_homepage_status_code(client):
 def test_homepage_content(client):
     """Testa se a página inicial contém texto esperado."""
     response = client.get("/")
-    assert b"Bem-vindo" in response.data  # Altere "Bem-vindo" para algo do seu template.
+    assert b"Nome Completo" in response.data  # Altere "Bem-vindo" para algo do seu template.
