@@ -29,12 +29,12 @@ jobs:
       # 3. Build da imagem Docker
       - name: Build Docker image
         run: |
-          docker build -t wisomar/projeto-flask-web:${{ github.sha }} .
+          docker build -t wisomar/projeto-flask-cv:${{ github.sha }} .
 
       # 4. Push da imagem Docker
       - name: Push Docker image
         run: |
-          docker push wisomar/projeto-flask-web:${{ github.sha }}
+          docker push wisomar/projeto-flask-cv:${{ github.sha }}
 
   # Job de Deploy no Vercel
   deploy-vercel:
